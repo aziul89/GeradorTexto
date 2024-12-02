@@ -1,7 +1,14 @@
+import os
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 from transformers import pipeline, AutoModelForCausalLM, AutoTokenizer
 import torch
+
+# hugging face token
+hf_token = os.getenv('HF_TOKEN')
+
+from huggingface_hub import login
+login(token=hf_token)
 
 app = Flask(__name__)
 CORS(app)
