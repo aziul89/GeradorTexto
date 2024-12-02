@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escreve.ai</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Jquery CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1 id="head">Escreve.ai</h1>
+        <p class="exp">Crie textos simples a partir de um único prompt.</p>
+        <form id="textForm">
+            <label for="prompt">Digite o prompt:</label>
+            <textarea id="prompt" rows="4" placeholder="Digite algo..."></textarea>
+
+            <label for="maxLength">Tamanho máximo (palavras):</label>
+            <input type="number" id="maxLength" min="1" value="50" />
+
+            <button type="submit">Gerar Texto</button>
+        </form>
+
+        <div id="loadingMessage" class="loading" style="display:none;">Gerando texto...</div>
+        <div id="generatedText"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
