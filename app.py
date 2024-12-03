@@ -15,7 +15,7 @@ model_id = "meta-llama/Llama-3.2-1B"
 client = InferenceClient(token=hf_token)
 
 app = Flask(__name__)
-CORS(app)
+CORS(app, resources={r"/*": {"origins": "https://escreveai.vercel.app"}})
 
 @app.route('/generate', methods=['POST'])
 def generate_text():
